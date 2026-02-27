@@ -1,0 +1,15 @@
+{
+    "name": "maria/curso-php",
+    "autoload": {
+        "psr-4": {
+            "Maria\\CursoPhp\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Majitoooo",
+            "email": "maria.cordonv@gmail.com"
+        }
+    ],
+    "require": {}
+}
