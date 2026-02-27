@@ -79,3 +79,27 @@ A:
 <?php if(isset($velocidadResultado) && $velocidadResultado !== null): ?>
     <h3>Resultado: <?= number_format($velocidadResultado,2) ?></h3>
 <?php endif; ?>
+
+<hr>
+<h2>Enviar Correo</h2>
+
+<form method="POST">
+
+Destino:
+<input type="email" name="destino" required><br><br>
+
+Asunto:
+<input type="text" name="asunto" required><br><br>
+
+Mensaje:
+<textarea name="mensaje" required></textarea><br><br>
+
+<button name="enviarCorreo">Enviar</button>
+
+</form>
+
+<?php if(isset($correoResultado)): ?>
+    <h3>
+        <?= $correoResultado ? "Correo enviado correctamente" : "Error enviando correo" ?>
+    </h3>
+<?php endif; ?>

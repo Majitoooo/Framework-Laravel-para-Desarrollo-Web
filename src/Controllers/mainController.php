@@ -5,6 +5,7 @@ namespace Maria\CursoPhp\Controllers;
 use Maria\CursoPhp\Models\AnalisisEstudiantes;
 use Maria\CursoPhp\Models\AnalisisEnvios;
 use Maria\CursoPhp\Models\Calculadora;
+use Maria\CursoPhp\Models\Emails;
 
 class MainController
 {
@@ -12,6 +13,7 @@ class MainController
     {
         $interesResultado = null;
         $velocidadResultado = null;
+        $correoResultado = null;
 
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -31,6 +33,15 @@ class MainController
                 $destino = $_POST["destino"];
 
                 $velocidadResultado = Calculadora::convertirVelocidad($valor,$origen,$destino);
+            }
+
+            if(isset($_POST["enviarCorreo"]))
+            {
+                $destino = $_POST["destino"];
+                $asunto = $_POST["asunto"];
+                $mensaje = $_POST["mensaje"];
+
+                $correoResultado = Emails::enviar($destino,$asunto,$mensaje);
             }
         }
 

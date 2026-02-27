@@ -6,12 +6,18 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'setasign\\Fpdi\\' => array($vendorDir . '/setasign/fpdi/src'),
+    'Symfony\\Polyfill\\Mbstring\\' => array($vendorDir . '/symfony/polyfill-mbstring'),
+    'Symfony\\Polyfill\\Intl\\Normalizer\\' => array($vendorDir . '/symfony/polyfill-intl-normalizer'),
+    'Symfony\\Polyfill\\Intl\\Idn\\' => array($vendorDir . '/symfony/polyfill-intl-idn'),
+    'Symfony\\Contracts\\Service\\' => array($vendorDir . '/symfony/service-contracts'),
+    'Symfony\\Contracts\\EventDispatcher\\' => array($vendorDir . '/symfony/event-dispatcher-contracts'),
+    'Symfony\\Component\\Mime\\' => array($vendorDir . '/symfony/mime'),
+    'Symfony\\Component\\Mailer\\' => array($vendorDir . '/symfony/mailer'),
+    'Symfony\\Component\\EventDispatcher\\' => array($vendorDir . '/symfony/event-dispatcher'),
     'Psr\\Log\\' => array($vendorDir . '/psr/log/src'),
-    'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
-    'Mpdf\\PsrLogAwareTrait\\' => array($vendorDir . '/mpdf/psr-log-aware-trait/src'),
-    'Mpdf\\PsrHttpMessageShim\\' => array($vendorDir . '/mpdf/psr-http-message-shim/src'),
-    'Mpdf\\' => array($vendorDir . '/mpdf/mpdf/src'),
+    'Psr\\EventDispatcher\\' => array($vendorDir . '/psr/event-dispatcher/src'),
+    'Psr\\Container\\' => array($vendorDir . '/psr/container/src'),
     'Maria\\CursoPhp\\' => array($baseDir . '/src'),
-    'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
+    'Egulias\\EmailValidator\\' => array($vendorDir . '/egulias/email-validator/src'),
+    'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/src'),
 );

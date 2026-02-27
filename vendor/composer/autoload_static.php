@@ -7,70 +7,106 @@ namespace Composer\Autoload;
 class ComposerStaticInitc3fecad4c9a7583fd09a6ce8483e2c7c
 {
     public static $files = array (
-        '6124b4c8570aa390c21fafd04a26c69f' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/deep_copy.php',
-        'db356362850385d08a5381de2638b5fd' => __DIR__ . '/..' . '/mpdf/mpdf/src/functions.php',
+        'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
+        'f598d06aa772fa33d905e87be6398fb1' => __DIR__ . '/..' . '/symfony/polyfill-intl-idn/bootstrap.php',
+        '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
+        '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
     );
 
     public static $prefixLengthsPsr4 = array (
-        's' =>
+        'S' =>
         array (
-            'setasign\\Fpdi\\' => 14,
+            'Symfony\\Polyfill\\Mbstring\\' => 26,
+            'Symfony\\Polyfill\\Intl\\Normalizer\\' => 33,
+            'Symfony\\Polyfill\\Intl\\Idn\\' => 26,
+            'Symfony\\Contracts\\Service\\' => 26,
+            'Symfony\\Contracts\\EventDispatcher\\' => 34,
+            'Symfony\\Component\\Mime\\' => 23,
+            'Symfony\\Component\\Mailer\\' => 25,
+            'Symfony\\Component\\EventDispatcher\\' => 34,
         ),
         'P' =>
         array (
             'Psr\\Log\\' => 8,
-            'Psr\\Http\\Message\\' => 17,
+            'Psr\\EventDispatcher\\' => 20,
+            'Psr\\Container\\' => 14,
         ),
         'M' =>
         array (
-            'Mpdf\\PsrLogAwareTrait\\' => 22,
-            'Mpdf\\PsrHttpMessageShim\\' => 24,
-            'Mpdf\\' => 5,
             'Maria\\CursoPhp\\' => 15,
+        ),
+        'E' =>
+        array (
+            'Egulias\\EmailValidator\\' => 23,
         ),
         'D' =>
         array (
-            'DeepCopy\\' => 9,
+            'Doctrine\\Common\\Lexer\\' => 22,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'setasign\\Fpdi\\' =>
+        'Symfony\\Polyfill\\Mbstring\\' =>
         array (
-            0 => __DIR__ . '/..' . '/setasign/fpdi/src',
+            0 => __DIR__ . '/..' . '/symfony/polyfill-mbstring',
+        ),
+        'Symfony\\Polyfill\\Intl\\Normalizer\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer',
+        ),
+        'Symfony\\Polyfill\\Intl\\Idn\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/polyfill-intl-idn',
+        ),
+        'Symfony\\Contracts\\Service\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/service-contracts',
+        ),
+        'Symfony\\Contracts\\EventDispatcher\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/event-dispatcher-contracts',
+        ),
+        'Symfony\\Component\\Mime\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/mime',
+        ),
+        'Symfony\\Component\\Mailer\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/mailer',
+        ),
+        'Symfony\\Component\\EventDispatcher\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/symfony/event-dispatcher',
         ),
         'Psr\\Log\\' =>
         array (
             0 => __DIR__ . '/..' . '/psr/log/src',
         ),
-        'Psr\\Http\\Message\\' =>
+        'Psr\\EventDispatcher\\' =>
         array (
-            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/event-dispatcher/src',
         ),
-        'Mpdf\\PsrLogAwareTrait\\' =>
+        'Psr\\Container\\' =>
         array (
-            0 => __DIR__ . '/..' . '/mpdf/psr-log-aware-trait/src',
-        ),
-        'Mpdf\\PsrHttpMessageShim\\' =>
-        array (
-            0 => __DIR__ . '/..' . '/mpdf/psr-http-message-shim/src',
-        ),
-        'Mpdf\\' =>
-        array (
-            0 => __DIR__ . '/..' . '/mpdf/mpdf/src',
+            0 => __DIR__ . '/..' . '/psr/container/src',
         ),
         'Maria\\CursoPhp\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
         ),
-        'DeepCopy\\' =>
+        'Egulias\\EmailValidator\\' =>
         array (
-            0 => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy',
+            0 => __DIR__ . '/..' . '/egulias/email-validator/src',
+        ),
+        'Doctrine\\Common\\Lexer\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/doctrine/lexer/src',
         ),
     );
 
     public static $classMap = array (
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
     );
 
     public static function getInitializer(ClassLoader $loader)
