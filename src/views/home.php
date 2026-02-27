@@ -103,3 +103,19 @@ Mensaje:
         <?= $correoResultado ? "Correo enviado correctamente" : "Error enviando correo" ?>
     </h3>
 <?php endif; ?>
+
+<hr>
+<h2>Subir Imagen</h2>
+
+<form method="POST" enctype="multipart/form-data">
+
+<input type="file" name="imagen" required><br><br>
+
+<button name="subirImagen">Subir</button>
+
+</form>
+
+<?php if(isset($imagenResultado)): ?>
+    <h3>Imagen subida:</h3>
+    <img src="<?= $imagenResultado ?>" width="200">
+<?php endif; ?>

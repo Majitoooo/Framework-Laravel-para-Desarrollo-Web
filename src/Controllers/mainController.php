@@ -6,6 +6,7 @@ use Maria\CursoPhp\Models\AnalisisEstudiantes;
 use Maria\CursoPhp\Models\AnalisisEnvios;
 use Maria\CursoPhp\Models\Calculadora;
 use Maria\CursoPhp\Models\Emails;
+use Maria\CursoPhp\Models\Imagen;
 
 class MainController
 {
@@ -14,6 +15,7 @@ class MainController
         $interesResultado = null;
         $velocidadResultado = null;
         $correoResultado = null;
+        $imagenResultado = null;
 
         if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
@@ -42,6 +44,21 @@ class MainController
                 $mensaje = $_POST["mensaje"];
 
                 $correoResultado = Emails::enviar($destino,$asunto,$mensaje);
+            }
+
+            if(isset($_POST["subirImagen"]))
+            {
+                if(isset($_FILES["imagen"]) && $_FILES["imagen"]["error"] === 0)
+                {
+                    $nombre = time()."_".$_FILES["imagen"]["name"];
+                    $ruta = __DIR__."/../../public/cargaImagen/".$nombre;
+
+                    move_uploaded_file($_FILES["imagen"]["tmp_name"],$ruta);
+
+                    Imagen::redimensionar($ruta,300,300);
+
+                    $imagenResultado = "cargaImagen/".$nombre;
+                }
             }
         }
 

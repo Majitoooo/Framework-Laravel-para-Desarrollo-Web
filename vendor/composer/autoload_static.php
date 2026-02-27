@@ -35,6 +35,11 @@ class ComposerStaticInitc3fecad4c9a7583fd09a6ce8483e2c7c
         array (
             'Maria\\CursoPhp\\' => 15,
         ),
+        'I' =>
+        array (
+            'Intervention\\Image\\' => 19,
+            'Intervention\\Gif\\' => 17,
+        ),
         'E' =>
         array (
             'Egulias\\EmailValidator\\' => 23,
@@ -93,6 +98,14 @@ class ComposerStaticInitc3fecad4c9a7583fd09a6ce8483e2c7c
         'Maria\\CursoPhp\\' =>
         array (
             0 => __DIR__ . '/../..' . '/src',
+        ),
+        'Intervention\\Image\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/intervention/image/src',
+        ),
+        'Intervention\\Gif\\' =>
+        array (
+            0 => __DIR__ . '/..' . '/intervention/gif/src',
         ),
         'Egulias\\EmailValidator\\' =>
         array (
